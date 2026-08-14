@@ -1,290 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshaykumar Khairnar | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://cdnjsn.css" rel="stylesheet">
+  <title>Akshaykumar Khairnar | Exchange Server Administrator</title>
+  <meta name="description" content="Portfolio of Akshaykumar Khairnar, Exchange Server Administrator and Microsoft 365 Specialist.">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-body{
-    background:#0f172a;
-    color:#ffffff;
-    line-height:1.6;
-}
+  <style>
+    :root {
+      --primary: #0078D4;
+      --secondary: #00A4EF;
+      --dark: #0F172A;
+      --light: #F8FAFC;
+      --card: #FFFFFF;
+      --gray: #64748B;
+    }
 
-header{
-    background:linear-gradient(135deg,#0078D4,#00A4EF);
-    text-align:center;
-    padding:100px 20px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-header h1{
-    font-size:3rem;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-header h2{
-    margin-top:10px;
-    font-weight:300;
-}
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:white;
-    color:#0078D4;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-}
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-.section{
-    max-width:1200px;
-    margin:auto;
-    padding:70px 20px;
-}
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.section-title{
-    text-align:center;
-    color:#00A4EF;
-    margin-bottom:40px;
-    font-size:2rem;
-}
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
 
-.about{
-    display:grid;
-    grid-template-columns:1fr 2fr;
-    gap:30px;
-    align-items:center;
-}
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-.profile{
-    text-align:center;
-}
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
 
-.profile img{
-    width:220px;
-    border-radius:50%;
-    border:5px solid #00A4EF;
-}
+    nav ul li {
+      margin-left: 20px;
+    }
 
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-.skill-card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    transition:.3s;
-}
+    nav ul li a:hover {
+      color: var(--primary);
+    }
 
-.skill-card:hover{
-    transform:translateY(-5px);
-}
+    .hero {
+      background: linear-gradient(135deg, #0078D4, #00A4EF);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-.skill-card i{
-    font-size:40px;
-    color:#00A4EF;
-    margin-bottom:15px;
-}
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
 
-.timeline-item{
-    background:#1e293b;
-    padding:20px;
-    margin-bottom:20px;
-    border-left:5px solid #00A4EF;
-}
+    .hero h1 {
+      font-size: 3rem;
+    }
 
-.project-card{
-    background:#1e293b;
-    padding:30px;
-    border-radius:15px;
-}
+    .hero h2 {
+      font-weight: 400;
+      margin-top: 10px;
+    }
 
-.project-card a{
-    color:#00A4EF;
-    text-decoration:none;
-}
+    .hero p {
+      max-width: 700px;
+      margin: 20px auto;
+    }
 
-.contact{
-    text-align:center;
-}
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
 
-.contact a{
-    color:#00A4EF;
-    text-decoration:none;
-}
+    .btn-primary {
+      background: #fff;
+      color: var(--primary);
+    }
 
-footer{
-    background:#020617;
-    text-align:center;
-    padding:20px;
-}
-</style>
+    .btn-primary:hover {
+      background: #f0f0f0;
+    }
+
+    .btn-project {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-project:hover {
+      background: #005a9e;
+    }
+
+    .btn-outline {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .about p {
+      margin-bottom: 15px;
+    }
+
+    .skills-grid,
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      text-align: center;
+    }
+
+    .skill-card i {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .timeline {
+      border-left: 4px solid var(--primary);
+      padding-left: 25px;
+    }
+
+    .timeline-item {
+      margin-bottom: 25px;
+    }
+
+    .timeline-item ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .project-card {
+      text-align: center;
+    }
+
+    .project-card p {
+      margin: 15px 0;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav .nav-content {
+        flex-direction: column;
+      }
+
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-content">
+      <a href="#" class="logo">AK</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <img src="https://via.placeholder.com/160" alt="Akshaykumar Khairnar">
+
     <h1>Akshaykumar Santhosh Khairnar</h1>
     <h2>Exchange Server Administrator | Microsoft 365 Specialist</h2>
 
-    <p style="margin-top:20px;">
-        Passionate IT professional helping organizations manage
-        enterprise messaging, Microsoft 365, and cloud solutions.
+    <p>
+      Experienced IT professional specializing in Microsoft Exchange,
+      Microsoft 365, Exchange Online, PowerShell Automation,
+      Email Security, and Enterprise Messaging Solutions.
     </p>
 
-    " class="btn">Contact Me</a>
-</header>
+    <a href="#contact" class="btn btn-primary">Contact Me</a>
+    <a href="https://github.com/A2xykumar" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </header>
 
-<section class="section">
-    <h2 class="section-title">About Me</h2>
-
-    <div class="about">
-        <div class="profile">
-            " alt="Profile">
+  <!-- Key Metrics / Stats -->
+  <section style="padding: 40px 0;">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="card stat">
+          <h3>10+</h3>
+          <p>Migration Projects</p>
         </div>
-
-        <div>
-            <p>
-                Hello, I'm Akshaykumar Khairnar, an experienced Exchange Server
-                Administrator based in Mumbai, Maharashtra.
-            </p>
-
-            <br>
-
-            <p>
-                My primary expertise includes Microsoft Exchange Server,
-                Microsoft 365 Administration, Email Security, Hybrid Deployments,
-                Active Directory, PowerShell Automation, and Enterprise Messaging.
-            </p>
-
-            <br>
-
-            <p>
-                My goal is to simplify technology and help businesses
-                achieve reliable, secure, and scalable IT operations.
-            </p>
+        <div class="card stat">
+          <h3>1000+</h3>
+          <p>Mailboxes Managed</p>
         </div>
+        <div class="card stat">
+          <h3>99.99%</h3>
+          <p>Messaging Availability</p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="section">
-    <h2 class="section-title">Technical Skills</h2>
-
-    <div class="skills">
-
-        <div class="skill-card">
-            <i class="fas fa-envelope"></i>
-            <h3>Exchange Server</h3>
-            <p>Exchange 2013, 2016, 2019, SE & Hybrid Deployments</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-cloud"></i>
-            <h3>Microsoft 365</h3>
-            <p>Exchange Online, Teams, SharePoint & Administration</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-terminal"></i>
-            <h3>PowerShell</h3>
-            <p>Automation & Infrastructure Management</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Email Security</h3>
-            <p>Defender, SPF, DKIM, DMARC & Compliance</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="section">
-    <h2 class="section-title">Professional Experience</h2>
-
-    <div class="timeline-item">
-        <h3>Exchange Server Administrator</h3>
-        <p>Mumbai, Maharashtra</p>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="card about">
         <p>
-            Managing enterprise email environments, Exchange infrastructure,
-            migrations, high availability, security, and Microsoft 365 integration.
+          Hello, I'm Akshaykumar Khairnar from Mumbai, Maharashtra.
         </p>
+        <p>
+          I specialize in Exchange Server Administration, Microsoft 365,
+          Exchange Online, Hybrid Migrations, Entra ID, PowerShell scripting,
+          and Email Security solutions.
+        </p>
+        <p>
+          My mission is to simplify IT, automate complex tasks,
+          and build secure, highly available enterprise messaging environments.
+        </p>
+      </div>
     </div>
+  </section>
 
-</section>
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="card skill-card">
+          <i class="fas fa-server"></i>
+          <h3>Exchange Server</h3>
+          <p>2013, 2016, 2019 &amp; Subscription Edition</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fab fa-microsoft"></i>
+          <h3>Microsoft 365</h3>
+          <p>Exchange Online, Teams, SharePoint, Entra ID</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fas fa-terminal"></i>
+          <h3>PowerShell</h3>
+          <p>Automation, Reporting &amp; Administration</p>
+        </div>
+        <div class="card skill-card">
+          <i class="fas fa-shield-halved"></i>
+          <h3>Email Security</h3>
+          <p>SPF, DKIM, DMARC, Defender for Office 365</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="section">
-    <h2 class="section-title">Featured Project</h2>
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="card timeline">
+        <div class="timeline-item">
+          <h3>Exchange Server Administrator</h3>
+          <p><strong>Location:</strong> Mumbai, Maharashtra</p>
+          <ul>
+            <li>Managed enterprise Exchange environments and high availability DAGs.</li>
+            <li>Performed seamless Exchange Online and Hybrid tenant migrations.</li>
+            <li>Automated recurring administration, onboarding, and reporting using PowerShell.</li>
+            <li>Configured advanced security policies, mail flow compliance controls, and anti-spoofing protocols.</li>
+            <li>Maintained enterprise disaster recovery and backup operational readiness.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="project-card">
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Project</h2>
+      <div class="card project-card">
         <h3>IT for Everyone</h3>
-
-        <p style="margin-top:15px;">
-            An educational initiative designed to simplify Information Technology
-            concepts for students, beginners, and professionals.
+        <p>
+          An educational initiative aimed at simplifying Information Technology,
+          Microsoft technologies, cloud computing, cybersecurity,
+          and system administration for everyone.
         </p>
-
-        <p style="margin-top:20px;">
-            <strong>GitHub Repository:</strong>
-            <br>
-            https://github.com/A2xykumar/IT-for-everyone
-               View Project on GitHub
-            </a>
-        </p>
-    </div>
-</section>
-
-<section class="section">
-    <h2 class="section-title">Certifications</h2>
-
-    <div class="timeline-item">
-        <p>Add your Microsoft, Azure, M365, Exchange and Security Certifications here.</p>
-    </div>
-</section>
-
-<section class="section contact" id="contact">
-    <h2 class="section-title">Get In Touch</h2>
-
-    <p>
-        <i class="fas fa-location-dot"></i>
-        Mumbai, Maharashtra, India
-    </p>
-
-    <br>
-
-    <p>
-        <i class="fas fa-github"></i>
-        <ttps://github.com/A2xykumar
-            github.com/A2xykumar
+        <a href="https://github.com/A2xykumar/IT-for-everyone" target="_blank" rel="noopener noreferrer" class="btn btn-project">
+          <i class="fab fa-github"></i> View Project
         </a>
-    </p>
+      </div>
+    </div>
+  </section>
 
-    <br>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="card" style="text-align: center;">
+        <p>
+          Interested in Exchange Server, Microsoft 365,
+          or enterprise messaging solutions? Let's connect.
+        </p>
+        <div class="contact-links">
+          <a href="https://github.com/A2xykumar" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:your-email@example.com">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>
-        <i class="https://in.linkedin.com/in/akshaykumar-k-b23598129"></i>
-        Add your LinkedIn profile here
-    </p>
-</section>
-
-<footer>
+  <!-- Footer -->
+  <footer>
     <p>© 2026 Akshaykumar Santhosh Khairnar | IT for Everyone</p>
-</footer>
+  </footer>
 
 </body>
 </html>
