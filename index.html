@@ -124,7 +124,39 @@
       font-weight: 600;
       transition: all 0.2s;
     }
+    /* Button styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
 
+.btn-primary {
+  background-color: #0078d4; /* Microsoft Blue */
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #2b579a;
+  color: #ffffff;
+}
+
+.btn-secondary:hover, .btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.nav-resume-btn {
+  background: rgba(0, 120, 212, 0.15);
+  border: 1px solid #0078d4;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
     .btn-primary {
       background: #fff;
       color: var(--primary);
@@ -280,6 +312,12 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <!-- Direct Resume Link -->
+      <li>
+        <a href="assets/Akshaykumar_Khairnar_Resume.pdf" download class="nav-resume-btn">
+          📄 Resume
+        </a>
+      </li>
       </ul>
     </div>
   </nav>
@@ -295,9 +333,16 @@
       Experienced IT professional specializing in Microsoft Exchange,
       Microsoft 365, Exchange Online, PowerShell Automation,
       Email Security, and Enterprise Messaging Solutions.
+      <strong>Available for Remote Roles Worldwide.</strong>
+    </p>
+    <p>
+      <strong>Available for Remote Roles Worldwide.</strong>
     </p>
 
     <a href="#contact" class="btn btn-primary">Contact Me</a>
+    <a href="assets/Akshaykumar_Khairnar_Resume.pdf" download class="btn btn-secondary">
+      <i class="fas fa-download"></i> Download Resume
+    </a>
     <a href="https://github.com/A2xykumar" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
       <i class="fab fa-github"></i> GitHub
     </a>
@@ -394,6 +439,8 @@
   </section>
 
   <!-- Projects Section -->
+
+  
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Featured Project</h2>
@@ -410,7 +457,39 @@
       </div>
     </div>
   </section>
+    <section id="projects">
+    <div class="container">
+    <div class="card project-card">
+      <h3>Exchange Hybrid Migration & Health Audit Toolkit</h3>
+      <p>A suite of PowerShell scripts for pre-migration readiness assessments, mailbox batch migration orchestration, and automated post-cutover DNS/mail-flow validation.</p>
+      <div class="tech-tags">
+        <span>PowerShell</span>
+        <span>Exchange Online</span>
+        <span>M365</span>
+      </div>
+      <a href="https://github.com/A2xykumar/IT-for-everyone" target="_blank" rel="noopener noreferrer" class="btn btn-project">
+      <i class="fab fa-github"></i> View Project
+      </a>
+    </div>
+    </div>
+  </section>
 
+  <!-- Project 2 -->
+  <section id="projects">
+    <div class="card project-card">
+      <h3>Email Security & Anti-Spoofing Automation</h3>
+      <p>Automated DMARC report parser and SPF/DKIM validation script designed to detect misconfigured transport rules and unauthorized relay senders.</p>
+      <div class="tech-tags">
+        <span>DMARC</span>
+        <span>DKIM</span>
+        <span>SPF</span>
+        <span>Defender for M365</span>
+      </div>
+      <a href="https://github.com/A2xykumar/IT-for-everyone" target="_blank" rel="noopener noreferrer" class="btn btn-project">
+      <i class="fab fa-github"></i> View Project
+      </a>
+    </div>
+  </section>
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
